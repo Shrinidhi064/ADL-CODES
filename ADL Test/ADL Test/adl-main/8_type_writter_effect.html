@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Typewriter Effect Animation</title>
+<style>
+/* Hide the text initially */
+.typewriter {
+overflow: hidden;
+font-size: 24px;
+font-family: monospace;
+white-space: nowrap;
+border-right: 3px solid black;
+animation: typing 1s steps(30, end) forwards;
+}
+/* Typing animation */
+@keyframes typing {
+from {
+width: 0;
+}
+to {
+width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<div class="typewriter" id="typewriter">Hello, World!</div>
+<script>
+// Get the element that displays the text
+const typewriter = document.getElementById('typewriter');
+// Get the text to be displayed
+const text = typewriter.innerHTML;
+// Clear the text from the element
+typewriter.innerHTML = '';
+// Set up a loop to animate the text
+let i = 0;
+function type() {
+if (i < text.length) {
+typewriter.innerHTML += text.charAt(i);
+i++;
+setTimeout(type, 50);
+}
+}
+// Start the animation
+type();
+</script>
+</body>
+</html>

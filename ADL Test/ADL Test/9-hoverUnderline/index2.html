@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Underline Effect on Hover</title>
+<style>
+/* style for the link */
+a {
+text-decoration: none;
+position: relative;
+color: #000;
+}
+/* style for the underline */
+a::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #000;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out 0s;
+}
+/* hover style for the underline */
+a:hover::before {
+visibility: visible;
+transform: scaleX(1);
+}
+</style>
+</head>
+<body>
+<h1>
+<a href="#">Hover over me!</a>
+</h1>
+</body>
+</html>

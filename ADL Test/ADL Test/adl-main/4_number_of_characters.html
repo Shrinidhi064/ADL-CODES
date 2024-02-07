@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Multi-line Text Analysis</title>
+</head>
+<body>
+<h1>Multi-line Text Analysis</h1>
+<form>
+<label for="text-input">Enter text:</label><br>
+<textarea id="text-input" name="text-input" rows="4"
+cols="50"></textarea><br>
+<button type="submit">Analyze Text</button>
+</form>
+<script>
+const form = document.querySelector('form');
+const textInput = document.getElementById('text-input');
+form.addEventListener('submit', (event) => {
+event.preventDefault();
+const text = textInput.value;
+const numChars = text.length;
+const numLines = text.split(/\r?\n/).length;
+const numWords = text.trim().split(/\s+/).length;
+const message = `Number of characters: ${numChars}\nNumber of
+lines: ${numLines}\nNumber of words: ${numWords}`;
+alert(message);
+});
+</script>
+</body>
+</html>

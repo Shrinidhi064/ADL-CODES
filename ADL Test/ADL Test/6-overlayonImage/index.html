@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Overlay Example</title>
+<style>
+/* Style for the overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+/* Style for the image */
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Style for the container */
+.container {
+    position: relative;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<img class="image" src="image.jpeg" alt="Your Image">
+<div class="overlay">
+<p>Hello World</p>
+</div>
+</div>
+</body>
+</html>
