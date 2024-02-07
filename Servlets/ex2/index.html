@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+</head>
+<body>
+    <h1>Current Date and Time</h1>
+    <div id="dateTimeDisplay"></div>
+    <button onclick="getCurrentDateTime()">Get Current Date and Time</button>
+
+    <script>
+        function getCurrentDateTime() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("dateTimeDisplay").innerText = this.responseText;
+                }
+            };
+            xhttp.open("GET", "currentDateTime", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
