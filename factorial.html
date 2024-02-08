@@ -1,0 +1,66 @@
+<!--Factorial of n number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #b8bab8;
+        color: #fff;
+    }
+</style>
+<body>
+    <form>
+        <input type="text" id="n" /><br />
+        <input type="button" value="Factorial" onclick="factorial()" />
+    </form>
+    <script>
+        function factorial()
+        {
+            var n=document.getElementById("n").value;
+            var fact=1;
+            for(var i=1;i<=n;i++)
+            {
+                fact=fact*i;
+            }
+            alert(fact);
+        }
+    </script>
+</body>
+</html>
+[08/02, 12:00 am] HemaBella🔔🔕: <!-- sum of the entire n numbers using alert-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #b8bab8;
+        color: #fff;
+    }
+</style>
+<body>
+    
+    <form>
+        <input type="text" id="n" /><br />
+        <input type="button" value="Addition" onclick="addition()" />
+    </form>
+    <script>
+        function addition()
+        {
+            var n=document.getElementById("n").value;
+            for(var i=1;i<=n;i++)
+            {
+                alert(i);
+            }
+        }
+    </script>
+
+</body>
+</html>

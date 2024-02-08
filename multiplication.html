@@ -1,0 +1,31 @@
+<!--multiplication table of numbers from 1 to 10 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #b8bab8;
+        color: #fff;
+    }
+</style>
+<body>
+    <form>
+        <input type="text" id="n" /><br />
+        <input type="button" value="Multiplication Table" onclick="multiplicationTable()" />
+    </form>
+    <script>
+        function multiplicationTable()
+        {
+            var n=document.getElementById("n").value;
+            for(var i=1;i<=10;i++)
+            {
+                alert(n+" x "+i+" = "+n*i);
+            }
+        }
+    </script>
+</body>
+</html>
